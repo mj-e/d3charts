@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    		<!-- Load d3.js and c3.js -->
-		<script src="js/d3.v3.min.js" charset="utf-8"></script>
-		<script src="js/c3.min.js"></script>
 
-		<!-- Load papaparse.js -->
-		<script src="js/papaparse.min.js"></script>
-		<script src="analyze.js"></script>
+<head>
+
+	<title>Document</title>
+	<link rel='stylesheet' href='stylesheets/style.css' />
+	<link rel='stylesheet' href='stylesheets/bootstrap.min.css' />
+	<link rel='stylesheet' href='stylesheets/font-awesome.min.css' />
+
+	<!-- Load c3.css -->
+	<link href="stylesheets/c3.css" rel="stylesheet" type="text/css">
+	<!-- Load d3.js and c3.js -->
+	<script src="js/d3.v3.min.js" charset="utf-8"></script>
+	<script src="js/c3.min.js"></script>
+
+	<!-- Load papaparse.js -->
+	<script src="js/papaparse.min.js"></script>
 </head>
+
 <body>
-    
+	<p>Page is rendering</p>
+	<br><br><br>
+	<div class="container">
+		<div id="chart"></div>
+	</div>
+	<script src="analyze.js"></script>
 </body>
+
 </html>

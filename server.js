@@ -23,11 +23,15 @@ mongoose.connect(DB, function (err) {
 app.use(bodyParser.json());
 app.use('/', apiRouter);
 
-app.get('/', function (req, res) {
-    res.sendFile('index.html', {'root': __dirname});
+app.use('/*', function (request, response) {
+    response.status(404).send({ reason: 'ROUTE NOT FOUND' });
 });
 
 app.listen(PORT, function (err) {
     if (err) return console.log('App not listening');
      console.log(`listening on port ${PORT}`);
+});
+
+app.use(function (error, request, response) {
+  return response.status(500).send({error: error});
 });

@@ -1,5 +1,5 @@
 function parseData(createGraph) {
-	Papa.parse("./USDJPY,D1.csv", {
+	Papa.parse('./USDJPY,D1.csv', {
 		download: true,
 		complete: function (results) {
 			createGraph(results.data);
@@ -9,7 +9,7 @@ function parseData(createGraph) {
 
 function createGraph(data) {
 	var time = [];
-	var price = ["Yen"];
+	var price = ['Yen'];
 
 	for (var i = 1; i < data.length; i++) {
 		time.push(data[i][0]);

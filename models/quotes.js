@@ -3,12 +3,8 @@ const Schema = mongoose.Schema;
 
 const QuoteSchema = new Schema({
     date: {
-        type: Number,
+        type: String,
         required: true
-    },
-    time: {
-        type: Number,
-        requied: true
     },
     open: {
         type: Number,
@@ -19,6 +15,10 @@ const QuoteSchema = new Schema({
         required: true
     },
     low: {
+        type: Number,
+        required: true
+    },
+    close: {
         type: Number,
         required: true
     },

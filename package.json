@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "seed": "node seed/seed.js",
+    "lint": "eslint ./*"
   },
   "author": "",
   "license": "ISC",
@@ -15,9 +17,11 @@
     "d3": "^4.9.1",
     "express": "^4.15.3",
     "lodash": "^4.17.4",
+    "log4js": "^1.1.1",
     "mongoose": "^4.10.0"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
     "nodemon": "^1.11.0"
   }
 }

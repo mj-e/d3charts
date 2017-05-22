@@ -4,14 +4,15 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const apiRouter = require('./routes/routes');
+const DB = 'mongodb://localhost/fx-live';
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/fx-live', function (err) {
+mongoose.connect(DB, function (err) {
     if (!err) {
-        console.log('connected to the Database: Mongo');
+        console.log(`Connected to the database: ${DB}`);
     } else {
-        console.log(`error connecting to the Database ${err}`);
+        console.log(`Error connecting to the Database ${err}`);
     }
 });
 

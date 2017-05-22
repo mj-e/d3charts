@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const QuoteSchema = new Schema({
+    symbol: {
+        type: String,
+        required: true
+    },
     date: {
         type: String,
         required: true

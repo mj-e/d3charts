@@ -8,4 +8,10 @@ router.route('/').get(function (request, response) {
 
 router.route('/close').get(quoteController.getClose);
 
+router.route('/open').get(quoteController.getOpen);
+
+router.route('/high').get(quoteController.getHigh);
+
+router.route('/low').get(quoteController.getLow);
+
 module.exports = router;

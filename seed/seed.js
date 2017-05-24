@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const quoteArray = require('../helpers/csvToObjects');
 const QuoteDoc = require('../models/quotes');
-var log4js = require('log4js');
-var logger = log4js.getLogger();
+const log4js = require('log4js');
+const logger = log4js.getLogger();
 const DB = 'mongodb://localhost/fx-live';
 
 mongoose.Promise = global.Promise;
@@ -15,6 +15,8 @@ mongoose.connect(DB, function (err) {
     logger.info(`Connected to ${DB}`);
     mongoose.connection.db.dropDatabase();
     quoteArray.forEach(function (quote) {
+        console.log(quote);
+        
         var quoteDoc = new QuoteDoc(quote);
         quoteDoc.save(function (err) {
             if (err) {

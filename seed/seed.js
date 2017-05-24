@@ -1,17 +1,18 @@
 const mongoose = require('mongoose');
-const quoteArray = require('../helpers/csvObject');
+const quoteArray = require('../helpers/csvToObjects');
 const QuoteDoc = require('../models/quotes');
 var log4js = require('log4js');
 var logger = log4js.getLogger();
+const DB = 'mongodb://localhost/fx-live';
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/fx-live', function (err) {
+mongoose.connect(DB, function (err) {
     if (err) {
         logger.error(err);
         return process.exit();
     }
-    logger.info('connected to mongo database');
+    logger.info(`Connected to ${DB}`);
     mongoose.connection.db.dropDatabase();
     quoteArray.forEach(function (quote) {
         var quoteDoc = new QuoteDoc(quote);

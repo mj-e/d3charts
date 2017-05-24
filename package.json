@@ -8,7 +8,7 @@
     "dev": "nodemon server.js",
     "seed": "node seed/seed.js",
     "lint": "eslint ./*",
-    "stream": "node helpers/csvObject.js"
+    "stream": "node helpers/csvToObjects.js"
   },
   "author": "",
   "license": "ISC",

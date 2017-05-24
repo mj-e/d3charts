@@ -10,24 +10,28 @@ const QuoteSchema = new Schema({
         type: String,
         required: true
     },
+    time: {
+        type: String,
+        required: true
+    },
     open: {
-        type: Number,
+        type: String,
         required: true
     },
     high: {
-        type: Number,
+        type: String,
         required: true
     },
     low: {
-        type: Number,
+        type: String,
         required: true
     },
     close: {
-        type: Number,
+        type: String,
         required: true
     },
     volume: {
-        type: Number,
+        type: String,
         required: true
     }
 });

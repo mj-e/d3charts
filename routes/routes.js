@@ -6,6 +6,8 @@ router.route('/').get(function (request, response) {
   response.status(200).send({status: 'OK'});
 });
 
+router.route('/all').get(quoteController.getAllQuotes);
+
 router.route('/close').get(quoteController.getClose);
 
 router.route('/open').get(quoteController.getOpen);

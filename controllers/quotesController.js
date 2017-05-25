@@ -1,5 +1,14 @@
 const quoteModel = require('../models/quotes.js');
 
+function getAllQuotes(req, res) {
+    quoteModel.find({}, function (err, quotes) {
+        if (err) {
+            return res.status(500).send({ error: err });
+        }
+        res.status(200).send({ quotes: quotes });
+    });
+}
+
 function getClose(req, res) {
     quoteModel.find({}, { 'symbol': 1, 'date': 1, 'time': 1, 'close': 1, '_id': 0 }, function (err, quotes) {
         if (err) {
@@ -36,6 +45,7 @@ function getLow(req, res) {
     });
 }
 module.exports = {
+    getAllQuotes: getAllQuotes,
     getClose: getClose,
     getOpen: getOpen,
     getHigh: getHigh,

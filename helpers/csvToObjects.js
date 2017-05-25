@@ -1,7 +1,6 @@
 var fs = require('fs');
 var csv = require('fast-csv');
 var stream = fs.createReadStream('csv/EURUSD,D1.csv');
-const moment = require('moment');
 
 var quoteArray = [];
 

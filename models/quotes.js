@@ -33,6 +33,10 @@ const QuoteSchema = new Schema({
     volume: {
         type: String,
         required: true
+    },
+    timestamp: {
+        type: Number,
+        required: true
     }
 });
 

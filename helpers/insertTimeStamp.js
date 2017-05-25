@@ -1,6 +1,6 @@
 const moment = require('moment');
 
-module.exports = function insertTimeStamp(arr) {
+function insertTimeStamp(arr) {
 
     function switchDayMonth(date) {
         const splitDate = date.split('/');
@@ -12,4 +12,4 @@ module.exports = function insertTimeStamp(arr) {
         arr[i].timestamp = ts;
     }
     return arr;
-};
+}
